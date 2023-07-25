@@ -11,7 +11,8 @@ const QuizApp = () => {
   const [selectedAnswers, setSelectedAnswers] = useState([]);
 
   const fetchQuestions = async () => {
-    const response = await axios.get(`
+    const response =
+      await axios.get(`https://quizapi.io/api/v1/questions?apiKey=mgPbKrdTveIkqazNk4PNFsQE2sIbqXXVgtgProHK&limit=10&category=code
     `);
     setQuestions(response.data);
   };
